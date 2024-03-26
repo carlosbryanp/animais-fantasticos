@@ -5,7 +5,7 @@ import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import fetchAnimais from "./modules/fetch-animais.js";
 import fetchBitcoin from "./modules/fetch-bitcoin.js";
-import initAnimacaoScroll from "./modules/scroll-animacao.js";
+import ScrollAnima from "./modules/scroll-anima.js";
 import initDropdownMenu from "./modules/dropdown.js";
 import initMenuMobile from "./modules/menu-mobile.js";
 import initFuncionamento from "./modules/funcionamento.js";
@@ -25,7 +25,9 @@ modal.init();
 const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
-initAnimacaoScroll();
+const scrollAnima = new ScrollAnima('[data-anime="scroll"]', "0.6");
+scrollAnima.init();
+
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
