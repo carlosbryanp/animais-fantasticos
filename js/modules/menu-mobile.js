@@ -13,8 +13,8 @@ export default class MenuMobile {
   }
 
   openMenu() {
-    this.menuList.classList.toggle(this.activeClass);
-    this.menuButton.classList.toggle(this.activeClass);
+    this.menuList.classList.add(this.activeClass);
+    this.menuButton.classList.add(this.activeClass);
     outsideClick(this.menuList, this.eventos, () => {
       this.menuList.classList.remove(this.activeClass);
       this.menuButton.classList.remove(this.activeClass);
@@ -26,7 +26,10 @@ export default class MenuMobile {
   }
 
   init() {
-    if (this.menuButton) this.addMenuMobileEvent();
+    console.log(this.menuList);
+    if (this.menuButton && this.menuList) {
+      this.addMenuMobileEvent();
+    }
     return this;
   }
 }

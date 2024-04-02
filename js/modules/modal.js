@@ -22,7 +22,7 @@ export default class Modal {
 
   // fecha o modal ao clicar do lado de fora
   clickForaModal(event) {
-    if (event.target === this.containerModal) this.toggleModal(event);
+    if (event.target === this.containerModal) this.toggleModal();
   }
 
   // adiciona os eventos ao elementos do moddal
